@@ -74,6 +74,7 @@
             </div>
         </div>
     </div>
+
     <div id="add_new_template_pop_up">
         <div>
             <h1>Create template</h1>
@@ -90,26 +91,47 @@
         </div>
         <div>
             <input class="button" type="submit" value="SAVE">
-            <input class="button" type="button" value="CANCEL" onclick="cancel()">
+            <input class="button" type="button" value="CANCEL" onclick="cancel_addnewPlan()">
         </div>
     </div>
+
     <div id="create_new_workout_pop_up">
         <div>
-            <h1>Create template</h1>
+            <h1>Create exercise plan</h1>
         </div>
         <div>
-            <label for="name">Template name: </label>
+            <label for="Exercise_name">Exercise name: </label>
             <br>
-            <input type="text" name="name" class="template_name" placeholder="Enter template name">
+            <input type="text" name="Exercise_name" class="template_name" placeholder="Enter exercise name">
         </div>
         <div>
-            <label for="description">Description: </label>
+            <label for="Repitions">Repitions: </label>
             <br>
-            <textarea name="description" class="template_description" placeholder="Enter template description"></textarea>
+            <input type="text" name="Repitions" class="template_name" placeholder="Enter repitions">
+        </div>
+        <div>
+            <label for="Sets">Sets: </label>
+            <br>
+            <input type="text" name="Sets" class="template_name" placeholder="Enter sets ">
+        </div>
+        <div>
+            <label for="Muscle_Group">Muscle Group: </label>
+            <br>
+            <input type="text" name="Muscle_Group" class="template_name" placeholder="Enter muscle group">
+        </div>
+        <div>
+            <label for="Week_Number">Week Number: </label>
+            <br>
+            <input type="text" name="Week_Number" class="template_name" placeholder="Enter week number">
+        </div>
+        <div>
+            <label for="Day_Number">Day Number: </label>
+            <br>
+            <input type="text" name="Day_Number" class="template_name" placeholder="Enter day number ">
         </div>
         <div>
             <input class="button" type="submit" value="SAVE">
-            <input class="button" type="button" value="CANCEL" onclick="cancel()">
+            <input class="button" type="button" value="CANCEL" onclick="cancel_createWorkout()">
         </div>
     </div>
   </div>
