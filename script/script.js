@@ -24,3 +24,8 @@ function cancel_viewWorkout(){
     var viewWorkout_popup = document.getElementById('view_workout_popup')
     viewWorkout_popup.classList.toggle('active')
 }
+
+
+function reuse(){
+    
+}
