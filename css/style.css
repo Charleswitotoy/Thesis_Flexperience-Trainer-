@@ -262,14 +262,14 @@ body {
   border: 2px solid black;
   color: black;
 }
-.template input{
+.template button{
   width: 100%;
   margin-top: 10px;
   padding: 10px;
   box-shadow: 1px 2px black;
   border-radius: 10px;
 }
-.template input:hover{
+.template button:hover{
   color: white;
   box-shadow: 1px 2px grey;
   background-color: #343639;

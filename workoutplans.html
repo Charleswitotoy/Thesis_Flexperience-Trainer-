@@ -51,26 +51,26 @@
             <div class="template">
                 <img src="img/bulking.png" alt="">
                 <p>Bulking Workout Plan</p>
-                <input type="button" value="VIEW" onclick="viewWorkout()">
-                <input type="button" value="MODIFY" onclick="createWorkout()">
+                <button id="workout_type" onclick="viewWorkout('Bulking Workout Plan')">VIEW</button>
+                <button id="workout_type"onclick="createWorkout()">MODIFY</button>
             </div>
             <div class="template">
                 <img src="img/strength_training.png" alt="">
                 <p>Strength Training Workout Plan</p>
-                <input type="button" value="VIEW">
-                <input type="button" value="MODIFY">
+                <button id="workout_type" onclick="viewWorkout('Strength Training Workout Plan')">VIEW</button>
+                <button id="workout_type" onclick="createWorkout()">MODIFY</button>
             </div>
             <div class="template">
                 <img src="img/bulking.png" alt="">
                 <p>Body Building Workout Plan</p>
-                <input type="button" value="VIEW">
-                <input type="button" value="MODIFY">
+                <button id="workout_type" onclick="viewWorkout('Body Building Workout Plan')">VIEW</button>
+                <button id="workout_type" onclick="createWorkout()">MODIFY</button>
             </div>
             <div class="template">
                 <img src="img/bulking.png" alt="">
                 <p>Shredding Workout Plan</p>
-                <input type="button" value="VIEW">
-                <input type="button" value="MODIFY">
+                <button id="workout_type" onclick="viewWorkout('Shredding Workout Plan')">VIEW</button>
+                <button id="workout_type" onclick="createWorkout()">MODIFY</button>
             </div>
         </div>
     </div>
@@ -136,50 +136,7 @@
     </div>
 
     <div id="view_workout_popup">
-        <div>
-            <h1>Workout Plan Details</h1>
-        </div>
-            <table>
-                <tr>
-                    <th>Exercise Name</th>
-                    <th>Repititions</th>
-                    <th>Sets</th>
-                    <th>Target Muscle Group</th>
-                    <th>Week No</th>
-                    <th>Day No</th>
-                    <!-- <th></th> -->
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <!-- <td><button>DONE</button></td> -->
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <!-- <td><button>DONE</button></td> -->
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <!-- <td><button>DONE</button></td> -->
-                </tr>
-            </table>
-        <div>
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
-        </div>
+        
     </div>
 </body>
 </html>
