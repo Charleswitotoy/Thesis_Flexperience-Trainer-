@@ -20,6 +20,14 @@ function cancel_viewWorkout(){
     viewWorkout_popup.classList.toggle('active')
 }
 
+// function greet(){
+//     const toGreet = document.getElementById('greeting')
+//     const getDate = new Date();
+//     let time = getDate.getTime();
+//     alert(getDate)
+//     toGreet.innerHTML = ``
+// }
+
 
 function viewWorkout(planType){
     alert(planType)

@@ -6,12 +6,12 @@
   <title>Sidebar Menu HTML and CSS | CodingNepal</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
   <aside class="sidebar">
     <div class="sidebar-header">
-      <img src="img/logo2.png" alt="logo" />
+      <img src="../img/Flexperience logo.png" alt="logo" />
       <h2>Flexperience</h2>
     </div>
     <ul class="sidebar-links">
@@ -37,37 +37,40 @@
       </li>
   </aside>
 
+  <div class="title_div">
+      <h1>
+          <span class="page_title">
+              Workout Plans
+          </span>
+      </h1>
+  </div>
+
   <div class="content_page">
-    <div>
-        <h1>
-            Workout Plans
-        </h1>
-    </div>
     <div class="plan_div">
         <div class="add_plan">
             <button class="material-symbols-outlined" onclick="addnewPlan()">add <span>Add new plan template</span></button>
         </div>
         <div class="template_toflex">
             <div class="template">
-                <img src="img/bulking.png" alt="">
+                <img src="../img/bulking.png" alt="">
                 <p>Bulking Workout Plan</p>
                 <button id="workout_type" onclick="viewWorkout('Bulking Workout Plan')">VIEW</button>
                 <button id="workout_type"onclick="createWorkout()">MODIFY</button>
             </div>
             <div class="template">
-                <img src="img/strength_training.png" alt="">
+                <img src="../img/strength_training.png" alt="">
                 <p>Strength Training Workout Plan</p>
                 <button id="workout_type" onclick="viewWorkout('Strength Training Workout Plan')">VIEW</button>
                 <button id="workout_type" onclick="createWorkout()">MODIFY</button>
             </div>
             <div class="template">
-                <img src="img/bulking.png" alt="">
+                <img src="../img/bulking.png" alt="">
                 <p>Body Building Workout Plan</p>
                 <button id="workout_type" onclick="viewWorkout('Body Building Workout Plan')">VIEW</button>
                 <button id="workout_type" onclick="createWorkout()">MODIFY</button>
             </div>
             <div class="template">
-                <img src="img/bulking.png" alt="">
+                <img src="../img/bulking.png" alt="">
                 <p>Shredding Workout Plan</p>
                 <button id="workout_type" onclick="viewWorkout('Shredding Workout Plan')">VIEW</button>
                 <button id="workout_type" onclick="createWorkout()">MODIFY</button>
@@ -97,7 +100,7 @@
 
     <div id="create_new_workout_pop_up">
         <div>
-            <h1>Create exercise plan</h1>
+            <h1>Modify exercise plan</h1>
         </div>
         <div>
             <label for="Exercise_name">Exercise name: </label>
@@ -140,4 +143,4 @@
     </div>
 </body>
 </html>
-<script src="script/script.js"></script>
+<script src="../script/script.js"></script>
