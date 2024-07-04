@@ -20,6 +20,24 @@ function cancel_viewWorkout(){
     viewWorkout_popup.classList.toggle('active')
 }
 
+function modify_Workout(){
+    var modify_workout_popup = document.getElementById('modify_workout_popup')
+    modify_workout_popup.classList.toggle('active')
+}
+function cancel_modify_Workout(){
+    var modify_workout_popup = document.getElementById('modify_workout_popup')
+    modify_workout_popup.classList.toggle('active')
+}
+
+function add_Workout(){
+    var add_workout_popup = document.getElementById('add_workout_popup')
+    add_workout_popup.classList.toggle('active')
+}
+function cancel_add_Workout(){
+    var add_workout_popup = document.getElementById('add_workout_popup')
+    add_workout_popup.classList.toggle('active')
+}
+
 // function greet(){
 //     const toGreet = document.getElementById('greeting')
 //     const getDate = new Date();
@@ -30,22 +48,24 @@ function cancel_viewWorkout(){
 
 
 function viewWorkout(planType){
-    alert(planType)
 
     if (planType == 'Bulking Workout Plan'){
         const form = document.getElementById('view_workout_popup');
         form.innerHTML = `
-        <div> 
+        <div class="title_and_button"> 
             <h1>${planType} Details</h1>
+            <button class="material-symbols-outlined" onclick="add_Workout()">add <span>Add Workout</span></button>
         </div>
+        <div>
             <table>
-               <tr>
+                <tr>
                     <th>Exercise Name</th>
                     <th>Repititions</th>
                     <th>Sets</th>
                     <th>Target Muscle Group</th>
                     <th>Week No</th>
                     <th>Day No</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -54,6 +74,7 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -62,6 +83,7 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -70,26 +92,31 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
             </table>
-        <div>
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">'
+        </div>
+        <div class="button_div">
+            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
         </div>
         `
     }else if(planType == 'Strength Training Workout Plan'){
         const form = document.getElementById('view_workout_popup');
         form.innerHTML = `
-        <div> 
+        <div class="title_and_button"> 
             <h1>${planType} Details</h1>
+            <button class="material-symbols-outlined" onclick="add_Workout()">add <span>Add Workout</span></button>
         </div>
+        <div>
             <table>
-               <tr>
+                <tr>
                     <th>Exercise Name</th>
                     <th>Repititions</th>
                     <th>Sets</th>
                     <th>Target Muscle Group</th>
                     <th>Week No</th>
                     <th>Day No</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -98,6 +125,7 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -106,6 +134,7 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -114,26 +143,31 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
             </table>
-        <div>
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">'
+        </div>
+        <div class="button_div">
+            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
         </div>
         `
     }else if(planType == 'Body Building Workout Plan'){
         const form = document.getElementById('view_workout_popup');
         form.innerHTML = `
-        <div> 
+        <div class="title_and_button"> 
             <h1>${planType} Details</h1>
+            <button class="material-symbols-outlined" onclick="add_Workout()">add <span>Add Workout</span></button>
         </div>
+        <div>
             <table>
-               <tr>
+                <tr>
                     <th>Exercise Name</th>
                     <th>Repititions</th>
                     <th>Sets</th>
                     <th>Target Muscle Group</th>
                     <th>Week No</th>
                     <th>Day No</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -142,6 +176,7 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -150,6 +185,7 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -158,26 +194,31 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
             </table>
-        <div>
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">'
+        </div>
+        <div class="button_div">
+            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
         </div>
         `
     }else if(planType == 'Shredding Workout Plan'){
         const form = document.getElementById('view_workout_popup');
         form.innerHTML = `
-        <div> 
+        <div class="title_and_button"> 
             <h1>${planType} Details</h1>
+            <button class="material-symbols-outlined" onclick="add_Workout()">add <span>Add Workout</span></button>
         </div>
+        <div>
             <table>
-               <tr>
+                <tr>
                     <th>Exercise Name</th>
                     <th>Repititions</th>
                     <th>Sets</th>
                     <th>Target Muscle Group</th>
                     <th>Week No</th>
                     <th>Day No</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -186,6 +227,7 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -194,6 +236,7 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -202,10 +245,12 @@ function viewWorkout(planType){
                     <td>4</td>
                     <td>5</td>
                     <td>6</td>
+                    <td><button onclick="modify_Workout()">Modify</button></td>
                 </tr>
             </table>
-        <div>
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">'
+        </div>
+        <div class="button_div">
+            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
         </div>
         `
     }

@@ -1,11 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Aldrich", sans-serif;
+  font-weight: normal;
+  font-style: normal;
   text-decoration: #343639;
+  /* transition: 0.5s; */
 }
 
 body {
@@ -164,7 +167,9 @@ body {
   padding-left: 100px;
 }
 .title_div h1 .page_title{
-  border-bottom: 2px solid #EC7E4A;
+  border-bottom: 2px solid ;
+  border-image: linear-gradient(to right, #EC7E4A 50%, transparent 50%) 100% 1;
+  font-weight: normal;
 }
 
 .add_plan{
@@ -173,35 +178,49 @@ body {
 }
 
 .add_plan button{
+  color: white;
   padding: 10px;
-  box-shadow: 2px 3px black;
+  background-color: #373D41;
+  box-shadow: 1px 2px 4px black;
   border-radius: 10px;
 }
 
 .add_plan button:hover{
   color: white;
-  box-shadow: 2px 3px grey;
-  background-color: #343639;
+  box-shadow: 2px 3px #1E1E1E;
+  background-color: #EC7E4A;
   border-radius: 10px;
+  transition: 0.5s;
 }
 
 .plan_div{
   border-radius: 10px;
-  box-shadow: 5px 10px black;
+  box-shadow: 1px 2px 4px black;
   margin-right: 20px;
-  background-color: white;
+  background-color: #323538;
   width: auto;
   height: auto;
   padding: 20px;
   margin-bottom: 50px;
 }
-#add_new_template_pop_up .button{
+#add_new_template_pop_up .button_save, .button_cancel, #modify_workout_popup .button_save, #modify_workout_popup .button_cancel, #add_workout_popup .button_save, #add_workout_popup .button_cancel{
+  color: white;
+  box-shadow: 1px 2px 4px black;
+  background-color: #323538;
+  border: 1px solid #EC7E4A;
   margin-top: 20px;
   width: 100%;
   padding: 10px;
   border-radius: 10px;
 }
-#add_new_template_pop_up .button:hover{
+#add_new_template_pop_up .button_save:hover, #modify_workout_popup .button_save:hover,  #add_workout_popup .button_save:hover{
+  color: white;
+  background-color: #EC7E4A;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+#add_new_template_pop_up .button_cancel:hover, #modify_workout_popup .button_cancel:hover,  #add_workout_popup .button_cancel:hover{
   color: white;
   background-color: black;
   width: 100%;
@@ -214,17 +233,22 @@ body {
 }
 
 #add_new_template_pop_up .template_name{
+  background-color: #D9D9D9;
   width: 100%;
   height: auto;
 }
 #add_new_template_pop_up .template_description{
+  background-color: #D9D9D9;
   width: 100%;
   height: 100px;
+}
+#add_new_template_pop_up h1{
+  margin-bottom: 20px;
 }
 
 
 #add_new_template_pop_up{
-  color: black;
+  color: white;
   text-align: center;
   position: fixed;
   top: 40%;
@@ -234,11 +258,12 @@ body {
   width: auto;
   padding: 20px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
-  background-color: white;
+  background-color: #323538;
   visibility: hidden;
   opacity: 0;
   /* transition: 0.5s; */
-  border-radius: 20px;
+  border-radius: 10px;
+  border: 1px solid #EC7E4A;
 }
 #add_new_template_pop_up.active{
   visibility: visible;
@@ -297,8 +322,7 @@ body {
 }
 
 #view_workout_popup{
-  color: black;
-  text-align: center;
+  color: white;
   position: fixed;
   top: 40%;
   left: 50%;
@@ -307,11 +331,12 @@ body {
   width: fit-content;
   padding: 20px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
-  background-color: white;
+  background-color: #323538;
   visibility: hidden;
   opacity: 0;
   /* transition: 0.5s; */
-  border-radius: 20px;
+  border-radius: 10px;
+  border: 1px solid #EC7E4A;
 }
 #view_workout_popup.active{
   visibility: visible;
@@ -319,10 +344,20 @@ body {
   /* transition: 0.5s; */
 }
 
+#view_workout_popup .button_div{
+  text-align: center;
+}
+
 #view_workout_popup .button{
+  color: white;
   margin-top: 20px;
+  background-color: #323538;
   width: 30%;
   padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 4px black;
+  border: 1px solid;
+  border-color: #EC7E4A;
   border-radius: 10px;
 }
 #view_workout_popup .button:hover{
@@ -351,36 +386,122 @@ body {
   padding: 8px;
 }
 
-#view_workout_popup tr:nth-child(even){background-color: #f2f2f2;}
-
-#view_workout_popup tr:hover {background-color: #ddd;}
+#view_workout_popup tr:nth-child(even){background-color: #5F6163;}
 
 #view_workout_popup th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: center;
   background-color: #EC7E4A;
   color: white;
 }
 
 #view_workout_popup table{
   width: 1000px;
-  box-shadow: 10px 10px 20px  grey;
+}
+
+#view_workout_popup table tr{
+  text-align: center;
 }
 
 #view_workout_popup table tr button{
-  width: fit-content;
+  color: white;
   padding: 10px;
+  background-color: #373D41;
+  box-shadow: 1px 2px 4px black;
+  border: 1px solid;
+  border-color: #EC7E4A;
   border-radius: 10px;
 }
 
 #view_workout_popup table tr button:hover{
   color: white;
-  background-color: black;
+  background-color: #EC7E4A;
   width: fit-content;
   padding: 10px;
   border-radius: 10px;
 }
+
+#view_workout_popup .title_and_button{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#view_workout_popup .title_and_button button{
+  color: white;
+  padding: 10px;
+  background-color: #373D41;
+  box-shadow: 1px 2px 4px black;
+  border: 1px solid;
+  border-color: #EC7E4A;
+  border-radius: 10px;
+}
+
+#view_workout_popup .title_and_button button:hover{
+  color: white;
+  background-color: #EC7E4A;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#modify_workout_popup{
+  border: 1px solid #EC7E4A;
+  position: fixed;
+  border-radius: 10px;
+  width: 30%;
+  background-color: #373D41;
+  box-shadow: 1px 2px 4px black;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-top: 50px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#modify_workout_popup.active{
+  visibility: visible;
+  opacity: 1;
+  /* transition: 0.5s; */
+}
+
+#modify_workout_popup .modify_div, #add_workout_popup .add_div{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#modify_workout_popup h1, #add_workout_popup h1{
+  padding: 10px;
+  text-align: center;
+}
+
+#modify_workout_popup .modify_input, #add_workout_popup .add_input{
+  padding: 5px;
+  background-color: #D9D9D9;
+}
+
+
+#add_workout_popup{
+  border: 1px solid #EC7E4A;
+  position: fixed;
+  border-radius: 10px;
+  width: 30%;
+  background-color: #373D41;
+  box-shadow: 1px 2px 4px black;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-top: 50px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#add_workout_popup.active{
+  visibility: visible;
+  opacity: 1;
+  /* transition: 0.5s; */
+}
+
 
 
 
@@ -395,28 +516,36 @@ body {
 .template img{
   background-repeat: no-repeat;
   background-color: #343639;
+  border: 1px solid;
+  border-color: #EC7E4A;
   border-radius: 20px;
   width: 200px;
 }
+
 .template {
+  font-size: 15px;
   border-radius: 20px;
-  padding: 20px;
   text-align: center;
   width: fit-content;
-  border: 2px solid black;
-  color: black;
+  color: white;
+  box-shadow: 1px 2px 4px black;
 }
+
 .template button{
-  width: 100%;
-  margin-top: 10px;
+  color: white;
+  width: 60%;
+  margin: 10%;
   padding: 10px;
-  box-shadow: 1px 2px black;
+  background-color: #343639;
+  box-shadow: 1px 2px 4px black;
+  border: 1px solid;
+  border-color: #EC7E4A;
   border-radius: 10px;
 }
 .template button:hover{
   color: white;
-  box-shadow: 1px 2px grey;
-  background-color: #343639;
+  box-shadow: 1px 2px 4px black;
+  background-color: #EC7E4A;
   border-radius: 10px;
 }
 

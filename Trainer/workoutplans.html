@@ -24,10 +24,10 @@
           <span class="material-symbols-outlined"> dashboard </span>Dashboard</a>
       </li>
       <li>
-        <a href="workoutplans.html"><span class="material-symbols-outlined"> fitness_center </span>Workout Plans</a>
+        <a href="#"><span class="material-symbols-outlined"> fitness_center </span>Workout Plans</a>
       </li>
       <li>
-        <a href="#"><span class="material-symbols-outlined">restaurant</span>Meal Plans</a>
+        <a href="mealplans.html"><span class="material-symbols-outlined">restaurant</span>Meal Plans</a>
       </li>
       <li>
         <a href="#"><span class="material-symbols-outlined">groups</span>Members</a>
@@ -46,34 +46,46 @@
   </div>
 
   <div class="content_page">
+    <div class="add_plan">
+        <button class="material-symbols-outlined" onclick="addnewPlan()">add <span>Add New Workout Plan Template</span></button>
+    </div>
     <div class="plan_div">
-        <div class="add_plan">
-            <button class="material-symbols-outlined" onclick="addnewPlan()">add <span>Add new plan template</span></button>
-        </div>
         <div class="template_toflex">
             <div class="template">
                 <img src="../img/bulking.png" alt="">
-                <p>Bulking Workout Plan</p>
-                <button id="workout_type" onclick="viewWorkout('Bulking Workout Plan')">VIEW</button>
-                <button id="workout_type"onclick="createWorkout()">MODIFY</button>
+                <div class="padded">
+                    <p>Bulking 
+                        <br> Workout Plan</p>
+                    <button id="workout_type" onclick="viewWorkout('Bulking Workout Plan')">VIEW</button>
+                </div>
+                <!-- <button id="workout_type"onclick="createWorkout()">MODIFY</button> -->
             </div>
             <div class="template">
                 <img src="../img/strength_training.png" alt="">
-                <p>Strength Training Workout Plan</p>
-                <button id="workout_type" onclick="viewWorkout('Strength Training Workout Plan')">VIEW</button>
-                <button id="workout_type" onclick="createWorkout()">MODIFY</button>
+                <div class="padded">
+                    <p>Strength Training
+                        <br> Workout Plan</p>
+                    <button id="workout_type" onclick="viewWorkout('Strength Training Workout Plan')">VIEW</button>
+                    <!-- <button id="workout_type" onclick="createWorkout()">MODIFY</button> -->
+                </div>
             </div>
             <div class="template">
                 <img src="../img/bulking.png" alt="">
-                <p>Body Building Workout Plan</p>
-                <button id="workout_type" onclick="viewWorkout('Body Building Workout Plan')">VIEW</button>
-                <button id="workout_type" onclick="createWorkout()">MODIFY</button>
+                <div class="padded">
+                    <p>Body Building 
+                        <br>Workout Plan</p>
+                    <button id="workout_type" onclick="viewWorkout('Body Building Workout Plan')">VIEW</button>
+                    <!-- <button id="workout_type" onclick="createWorkout()">MODIFY</button> -->
+                </div>
             </div>
             <div class="template">
                 <img src="../img/bulking.png" alt="">
-                <p>Shredding Workout Plan</p>
-                <button id="workout_type" onclick="viewWorkout('Shredding Workout Plan')">VIEW</button>
-                <button id="workout_type" onclick="createWorkout()">MODIFY</button>
+                <div class="padded">
+                    <p>Shredding 
+                        <br>Workout Plan</p>
+                    <button id="workout_type" onclick="viewWorkout('Shredding Workout Plan')">VIEW</button>
+                    <!-- <button id="workout_type" onclick="createWorkout()">MODIFY</button> -->
+                </div>
             </div>
         </div>
     </div>
@@ -93,8 +105,8 @@
             <textarea name="description" class="template_description" placeholder="Enter template description"></textarea>
         </div>
         <div>
-            <input class="button" type="submit" value="SAVE">
-            <input class="button" type="button" value="CANCEL" onclick="cancel_addnewPlan()">
+            <input class="button_save" type="submit" value="SAVE">
+            <input class="button_cancel" type="button" value="CANCEL" onclick="cancel_addnewPlan()">
         </div>
     </div>
 
@@ -140,6 +152,70 @@
 
     <div id="view_workout_popup">
         
+    </div>
+
+    <div id="modify_workout_popup">
+        <h1>Modify Workout</h1>
+        <div class="modify_div">
+            <label for="name">Exercise name: </label>
+            <input type="text" name="name" class="modify_input" placeholder="Enter template name">
+        </div>
+        <div class="modify_div">
+            <label for="description">Repitions: </label>
+            <input type="text" name="name" class="modify_input" placeholder="Enter template name">
+        </div>
+        <div class="modify_div">
+            <label for="description">Sets: </label>
+            <input type="text" name="name" class="modify_input" placeholder="Enter template name">
+        </div>
+        <div class="modify_div">
+            <label for="description">Target Muscle Group: </label>
+            <input type="text" name="name" class="modify_input" placeholder="Enter template name">
+        </div>
+        <div class="modify_div">
+            <label for="description">Week No.: </label>
+            <input type="text" name="name" class="modify_input" placeholder="Enter template name">
+        </div>
+        <div class="modify_div">
+            <label for="description">Day No.: </label>
+            <input type="text" name="name" class="modify_input" placeholder="Enter template name">
+        </div>
+        <div>
+            <button class="button_save" type="submit" >SAVE</button>
+            <button class="button_cancel" onclick="cancel_modify_Workout()" type="button">CANCEL</button>
+        </div>
+    </div>
+
+    <div id="add_workout_popup">
+        <h1>Add Workout</h1>
+        <div class="add_div">
+            <label for="name">Exercise name: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter template name">
+        </div>
+        <div class="add_div">
+            <label for="description">Repitions: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter template name">
+        </div>
+        <div class="add_div">
+            <label for="description">Sets: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter template name">
+        </div>
+        <div class="add_div">
+            <label for="description">Target Muscle Group: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter template name">
+        </div>
+        <div class="add_div">
+            <label for="description">Week No.: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter template name">
+        </div>
+        <div class="add_div">
+            <label for="description">Day No.: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter template name">
+        </div>
+        <div>
+            <button class="button_save" type="submit" >SAVE</button>
+            <button class="button_cancel" onclick="cancel_add_Workout()" type="button">CANCEL</button>
+        </div>
     </div>
 </body>
 </html>
