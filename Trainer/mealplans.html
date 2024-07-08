@@ -1,11 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidebar Menu HTML and CSS | CodingNepal</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-    
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="../img/Flexperience logo.png" alt="logo" />
+      <h2>Flexperience</h2>
+    </div>
+    <ul class="sidebar-links">
+      <h4>
+        <span>Main Menu</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="index.html">
+          <span class="material-symbols-outlined"> dashboard </span>Dashboard</a>
+      </li>
+      <li>
+        <a href="workoutplans.html"><span class="material-symbols-outlined"> fitness_center </span>Workout Plans</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined">restaurant</span>Meal Plans</a>
+      </li>
+      <li>
+        <a href="students.html"><span class="material-symbols-outlined">groups</span>Members</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined">settings</span>Settings</a>
+      </li>
+  </aside>
+
+  <div class="title_div">
+      <h1>
+          <span class="page_title">
+              Meal Plans
+          </span>
+      </h1>
+  </div>
+
+  <div class="content_page">
+    <div class="add_plan">
+        <button class="material-symbols-outlined" onclick="addnewMealPlan()">add <span>Add New Meal Plan Template</span></button>
+    </div>
+    <div class="plan_div">
+        <div class="template_toflex">
+            <div class="template">
+                <img src="../img/Meal img.png" alt="">
+                <div class="padded">
+                    <p>Bulking 
+                        <br> Meal Plan</p>
+                    <button id="meal_type" onclick="viewMeal('Bulking Meal Plan')">VIEW</button>
+                </div>
+                <!-- <button id="workout_type"onclick="createWorkout()">MODIFY</button> -->
+            </div>
+            <div class="template">
+                <img src="../img/Meal img.png" alt="">
+                <div class="padded">
+                    <p>Strength Training
+                        <br> Meal Plan</p>
+                    <button id="meal_type" onclick="viewMeal('Strength Training Meal Plan')">VIEW</button>
+                    <!-- <button id="workout_type" onclick="createWorkout()">MODIFY</button> -->
+                </div>
+            </div>
+            <div class="template">
+                <img src="../img/Meal img.png" alt="">
+                <div class="padded">
+                    <p>Body Building 
+                        <br>Meal Plan</p>
+                    <button id="meal_type" onclick="viewMeal('Body Building Meal Plan')">VIEW</button>
+                    <!-- <button id="workout_type" onclick="createWorkout()">MODIFY</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="add_new_template_pop_up">
+        <div>
+            <h1>Create template</h1>
+        </div>
+        <div>
+            <label for="name">Template name: </label>
+            <br>
+            <input type="text" name="name" class="template_name" placeholder="Enter template name">
+        </div>
+        <div>
+            <label for="description">Description: </label>
+            <br>
+            <textarea name="description" class="template_description" placeholder="Enter template description"></textarea>
+        </div>
+        <div>
+            <input class="button_save" type="submit" value="SAVE">
+            <input class="button_cancel" type="button" value="CANCEL" onclick="cancel_addnewMealPlan()">
+        </div>
+    </div>
+
+    <div id="create_new_meal_pop_up">
+        <div>
+            <h1>Modify Meal Plan</h1>
+        </div>
+        <div>
+            <label for="Exercise_name">Exercise name: </label>
+            <br>
+            <input type="text" name="Exercise_name" class="template_name" placeholder="Enter exercise name">
+        </div>
+        <div>
+            <label for="Repitions">Repitions: </label>
+            <br>
+            <input type="text" name="Repitions" class="template_name" placeholder="Enter repitions">
+        </div>
+        <div>
+            <label for="Sets">Sets: </label>
+            <br>
+            <input type="text" name="Sets" class="template_name" placeholder="Enter sets ">
+        </div>
+        <div>
+            <label for="Muscle_Group">Muscle Group: </label>
+            <br>
+            <input type="text" name="Muscle_Group" class="template_name" placeholder="Enter muscle group">
+        </div>
+        <div>
+            <label for="Week_Number">Week Number: </label>
+            <br>
+            <input type="text" name="Week_Number" class="template_name" placeholder="Enter week number">
+        </div>
+        <div>
+            <label for="Day_Number">Day Number: </label>
+            <br>
+            <input type="text" name="Day_Number" class="template_name" placeholder="Enter day number ">
+        </div>
+        <div>
+            <input class="button" type="submit" value="SAVE">
+            <input class="button" type="button" value="CANCEL" onclick="cancel_createMeal()">
+        </div>
+    </div>
+
+    <div id="view_meal_popup">
+        
+    </div>
+
+    <div id="modify_meal_popup">
+        <h1>Modify Meal</h1>
+        <div class="modify_div">
+            <label for="name">Week Number: </label>
+            <input type="text" name="Week_Number" class="modify_input">
+        </div>
+        <div class="modify_div">
+            <label for="description">Day Number: </label>
+            <input type="text" name="Day_Number" class="modify_input">
+        </div>
+        <div class="modify_div">
+            <label for="description">Meal of the Day: </label>
+            <input type="text" name="MealoftheDay" class="modify_input">
+        </div>
+        <div class="modify_div">
+            <label for="description">Meal Name: </label>
+            <input type="text" name="Meal_Name" class="modify_input">
+        </div>
+        <div class="modify_div">
+            <label for="description">Protein: </label>
+            <input type="text" name="Protein" class="modify_input">
+        </div>
+        <div class="modify_div">
+            <label for="description">Carbs: </label>
+            <input type="text" name="Carbs" class="modify_input">
+        </div>
+        <div class="modify_div">
+            <label for="description">Fat: </label>
+            <input type="text" name="Fat" class="modify_input">
+        </div>
+        <div>
+            <button class="button_save" type="submit" >SAVE</button>
+            <button class="button_cancel" onclick="cancel_modify_Meal()" type="button">CANCEL</button>
+        </div>
+    </div>
+
+    <div id="add_meal_popup">
+        <h1>Add Meal</h1>
+        <div class="add_div">
+            <label for="name">Week Number: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter Week No.">
+        </div>
+        <div class="add_div">
+            <label for="description">Day Number: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter Day No.">
+        </div>
+        <div class="add_div">
+            <label for="description">Meal of the Day: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter Meal of the Day">
+        </div>
+        <div class="add_div">
+            <label for="description">Meal Name: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter Meal name">
+        </div>
+        <div class="add_div">
+            <label for="description">Protein: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter protein">
+        </div>
+        <div class="add_div">
+            <label for="description">Carbs: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter carbs">
+        </div>
+        <div class="add_div">
+            <label for="description">Fat: </label>
+            <input type="text" name="name" class="add_input" placeholder="Enter fat">
+        </div>
+        <div>
+            <button class="button_save" type="submit" >SAVE</button>
+            <button class="button_cancel" onclick="cancel_add_Meal()" type="button">CANCEL</button>
+        </div>
+    </div>
 </body>
 </html>
+<script src="../script/script.js"></script>

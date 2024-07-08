@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidebar Menu HTML and CSS | CodingNepal</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="../img/Flexperience logo.png" alt="logo" />
+      <h2>Flexperience</h2>
+    </div>
+    <ul class="sidebar-links">
+      <h4>
+        <span>Main Menu</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="index.html">
+          <span class="material-symbols-outlined"> dashboard </span>Dashboard</a>
+      </li>
+      <li>
+        <a href="workoutplans.html"><span class="material-symbols-outlined"> fitness_center </span>Workout Plans</a>
+      </li>
+      <li>
+        <a href="mealplans.html"><span class="material-symbols-outlined">restaurant</span>Meal Plans</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined">groups</span>Members</a>
+      </li>
+      <li>
+        <a href="#"><span class="material-symbols-outlined">settings</span>Settings</a>
+      </li>
+  </aside>
+
+  <div class="title_div">
+      <h1>
+          <span class="page_title">
+              Students
+          </span>
+      </h1>
+  </div>
+  <div id="view_students">
+    <div class="title_and_button"> 
+        <h1>Student Details</h1>
+        <!-- <button class="material-symbols-outlined" onclick="add_Student()">add <span>Add Workout</span></button> -->
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Weight</th>
+                <th>Body Type</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td><button onclick="modify_Workout()">Modify</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td><button onclick="modify_Workout()">Modify</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td><button onclick="modify_Workout()">Modify</button></td>
+            </tr>
+        </table>
+    </div>
+  </div>
+</body>
+</html>
+<script src="../script/script.js"></script>

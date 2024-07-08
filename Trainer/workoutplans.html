@@ -30,7 +30,7 @@
         <a href="mealplans.html"><span class="material-symbols-outlined">restaurant</span>Meal Plans</a>
       </li>
       <li>
-        <a href="#"><span class="material-symbols-outlined">groups</span>Members</a>
+        <a href="students.html"><span class="material-symbols-outlined">groups</span>Members</a>
       </li>
       <li>
         <a href="#"><span class="material-symbols-outlined">settings</span>Settings</a>
@@ -47,7 +47,7 @@
 
   <div class="content_page">
     <div class="add_plan">
-        <button class="material-symbols-outlined" onclick="addnewPlan()">add <span>Add New Workout Plan Template</span></button>
+        <button class="material-symbols-outlined" onclick="addnewWorkoutPlan()">add <span>Add New Workout Plan Template</span></button>
     </div>
     <div class="plan_div">
         <div class="template_toflex">
@@ -106,47 +106,7 @@
         </div>
         <div>
             <input class="button_save" type="submit" value="SAVE">
-            <input class="button_cancel" type="button" value="CANCEL" onclick="cancel_addnewPlan()">
-        </div>
-    </div>
-
-    <div id="create_new_workout_pop_up">
-        <div>
-            <h1>Modify exercise plan</h1>
-        </div>
-        <div>
-            <label for="Exercise_name">Exercise name: </label>
-            <br>
-            <input type="text" name="Exercise_name" class="template_name" placeholder="Enter exercise name">
-        </div>
-        <div>
-            <label for="Repitions">Repitions: </label>
-            <br>
-            <input type="text" name="Repitions" class="template_name" placeholder="Enter repitions">
-        </div>
-        <div>
-            <label for="Sets">Sets: </label>
-            <br>
-            <input type="text" name="Sets" class="template_name" placeholder="Enter sets ">
-        </div>
-        <div>
-            <label for="Muscle_Group">Muscle Group: </label>
-            <br>
-            <input type="text" name="Muscle_Group" class="template_name" placeholder="Enter muscle group">
-        </div>
-        <div>
-            <label for="Week_Number">Week Number: </label>
-            <br>
-            <input type="text" name="Week_Number" class="template_name" placeholder="Enter week number">
-        </div>
-        <div>
-            <label for="Day_Number">Day Number: </label>
-            <br>
-            <input type="text" name="Day_Number" class="template_name" placeholder="Enter day number ">
-        </div>
-        <div>
-            <input class="button" type="submit" value="SAVE">
-            <input class="button" type="button" value="CANCEL" onclick="cancel_createWorkout()">
+            <input class="button_cancel" type="button" value="CANCEL" onclick="cancel_addnewWorkoutPlan()">
         </div>
     </div>
 
