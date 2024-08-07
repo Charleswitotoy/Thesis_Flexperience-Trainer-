@@ -264,11 +264,11 @@ function viewWorkout(planType){
 
 function addnewMealPlan(){
     var newPlan_popup = document.getElementById('add_new_template_pop_up')
-    newPlan_popup.classList.toggle('active')
+    newPlan_popup.classList.remove('invisible')
 }
 function cancel_addnewMealPlan(){
     var newPlan_popup = document.getElementById('add_new_template_pop_up')
-    newPlan_popup.classList.toggle('active')
+    newPlan_popup.classList.add('invisible')
 }
 
 function cancel_viewMeal(){
@@ -528,3 +528,15 @@ const form = document.getElementById('view_students');
             <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
         </div>
         `
+
+
+function togglePopup(active) {
+    const popup = document.getElementById('view_meal_popup');
+    if (active) {
+        popup.classList.remove('invisible', 'opacity-0');
+        popup.classList.add('visible', 'opacity-100');
+    } else {
+        popup.classList.remove('visible', 'opacity-100');
+        popup.classList.add('invisible', 'opacity-0');
+    }
+    }
