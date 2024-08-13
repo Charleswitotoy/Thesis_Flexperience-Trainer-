@@ -10,6 +10,17 @@
     <link href="/src/output.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <style>
+        #view_meal_popup th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #EC7E4A;
+            color: white;
+        }
+        #view_meal_popup tr:nth-child(even){background-color: #5F6163;}
+        #view_meal_popup td, #view_meal_popup th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
         /*Custom CSS for Sidebar hover*/
         .sidebar:hover .Menu {
             opacity: 1;
@@ -39,7 +50,7 @@
       <ul class="sidebar-links list-none mt-[20px] h-[80%] overflow-y-auto scrollbar-none">
         <h4  class="text-white font-medium whitespace-nowrap my-[10px] relative">
           <span class="Menu opacity-0 delay-0">Main Menu</span>
-          <div class="menu-separator absolute left-0 top-1/2 w-full h-[1px] bg-black transform scale-x-100 -translate-y-1/2 origin-right transition-transform delay-200"></div>
+          <div class="menu-separator absolute left-0 top-1/2 w-full h-[1px] bg-black transform scale-x-100 -translate-y-1/2 origin-right transition-transform"></div>
         </h4>
   
         <li>
@@ -104,139 +115,194 @@
         </div>
     </div>
 
-    <div id="add_new_template_pop_up" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-12 w-auto p-5 shadow-lg bg-gray-800 text-white text-center rounded-lg border border-[#EC7E4A] invisible transition-opacity duration-300">
+    <div id="add_new_template_pop_up" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-12 w-auto p-5 shadow-lg bg-gray-800 text-white text-center rounded-lg border border-[#EC7E4A] invisible transition-opacity">
         <div>
-            <h1>Create template</h1>
+            <h class="mb-5">Create template</h1>
         </div>
         <div>
-            <label for="name">Template name: </label>
+            <label for="name" class="float-left">Template name: </label>
             <br>
-            <input type="text" name="name" class="template_name text-black" placeholder="Enter template name">
+            <input type="text" name="name" class="template_name text-black bg-[#D9D9D9] w-full h-auto" placeholder="Enter template name">
         </div>
         <div>
-            <label for="description">Description: </label>
+            <label for="description" class="float-left ">Description: </label>
             <br>
-            <textarea name="description" class="template_description text-black" placeholder="Enter template description"></textarea>
+            <textarea name="description" class="template_description text-black bg-[#D9D9D9] w-full h-[100px]" placeholder="Enter template description"></textarea>
         </div>
         <div>
-            <input class="button_save text-white shadow-[1px_2px_black] bg-[#323538] border border-[#EC7E4A] mt-[20px] w-full p-[10px] rounded-[10px] hover:bg-primary-50 duration-300" type="submit" value="SAVE">
-            <input class="button_cancel text-white shadow-[1px_2px_black] bg-[#323538] border border-[#EC7E4A] mt-[20px] w-full p-[10px] rounded-[10px] hover:bg-primary-50 duration-300" type="button" value="CANCEL" onclick="cancel_addnewMealPlan()">
+            <input class="button_save text-white shadow-[1px_2px_black] bg-[#323538] border border-[#EC7E4A] mt-[20px] w-full p-[10px] rounded-[10px] hover:bg-primary-50" type="submit" value="SAVE">
+            <input class="button_cancel text-white shadow-[1px_2px_black] bg-[#323538] border border-[#EC7E4A] mt-[20px] w-full p-[10px] rounded-[10px] hover:bg-primary-50" type="button" value="CANCEL" onclick="cancel_addnewMealPlan()">
         </div>
     </div>
 
-    <div id="create_new_meal_pop_up">
+    <div id="create_new_meal_pop_up" class="text-black text-center fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-[50px] w-auto p-[20px] shadow-[0_5px_30px_rgba(0,0,0,0.3)] bg-white invisible opacity-0 rounded-[20px]">
         <div>
             <h1>Modify Meal Plan</h1>
         </div>
         <div>
-            <label for="Exercise_name">Exercise name: </label>
+            <label for="Exercise_name" class="float-left">Exercise name: </label>
             <br>
             <input type="text" name="Exercise_name" class="template_name" placeholder="Enter exercise name">
         </div>
         <div>
-            <label for="Repitions">Repitions: </label>
+            <label for="Repitions" class="float-left">Repitions: </label>
             <br>
             <input type="text" name="Repitions" class="template_name" placeholder="Enter repitions">
         </div>
         <div>
-            <label for="Sets">Sets: </label>
+            <label for="Sets" class="float-left">Sets: </label>
             <br>
             <input type="text" name="Sets" class="template_name" placeholder="Enter sets ">
         </div>
         <div>
-            <label for="Muscle_Group">Muscle Group: </label>
+            <label for="Muscle_Group" class="float-left">Muscle Group: </label>
             <br>
             <input type="text" name="Muscle_Group" class="template_name" placeholder="Enter muscle group">
         </div>
         <div>
-            <label for="Week_Number">Week Number: </label>
+            <label for="Week_Number" class="float-left">Week Number: </label>
             <br>
             <input type="text" name="Week_Number" class="template_name" placeholder="Enter week number">
         </div>
         <div>
-            <label for="Day_Number">Day Number: </label>
+            <label for="Day_Number" class="float-left">Day Number: </label>
             <br>
             <input type="text" name="Day_Number" class="template_name" placeholder="Enter day number ">
         </div>
         <div>
-            <input class="button" type="submit" value="SAVE">
-            <input class="button" type="button" value="CANCEL" onclick="cancel_createMeal()">
+            <input class="button mt-[20px] w-full p-[10px] rounded-[10px] hover:text-white hover:bg-black hover:w-full hover:p-[10px] hover:rounded-[10px]" type="submit" value="SAVE">
+            <input class="button mt-[20px] w-full p-[10px] rounded-[10px] hover:text-white hover:bg-black hover:w-full hover:p-[10px] hover:rounded-[10px]" type="button" value="CANCEL" onclick="cancel_createMeal()">
         </div>
     </div>
 
-    <div id="view_meal_popup" class="fixed top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 mt-[50px] w-fit p-[20px] shadow-lg bg-[#323538] invisible opacity-0 transition-opacity duration-500 rounded-[10px] border border-[#EC7E4A]">
-        
-    </div>
-
-    <div id="modify_meal_popup">
-        <h1>Modify Meal</h1>
-        <div class="modify_div">
-            <label for="name">Week Number: </label>
-            <input type="text" name="Week_Number" class="modify_input">
-        </div>
-        <div class="modify_div">
-            <label for="description">Day Number: </label>
-            <input type="text" name="Day_Number" class="modify_input">
-        </div>
-        <div class="modify_div">
-            <label for="description">Meal of the Day: </label>
-            <input type="text" name="MealoftheDay" class="modify_input">
-        </div>
-        <div class="modify_div">
-            <label for="description">Meal Name: </label>
-            <input type="text" name="Meal_Name" class="modify_input">
-        </div>
-        <div class="modify_div">
-            <label for="description">Protein: </label>
-            <input type="text" name="Protein" class="modify_input">
-        </div>
-        <div class="modify_div">
-            <label for="description">Carbs: </label>
-            <input type="text" name="Carbs" class="modify_input">
-        </div>
-        <div class="modify_div">
-            <label for="description">Fat: </label>
-            <input type="text" name="Fat" class="modify_input">
+    <div id="view_meal_popup" class="fixed top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 mt-[50px] w-fit p-[20px] shadow-lg bg-[#323538] invisible transition-opacity duration-500 rounded-[10px] border border-[#EC7E4A]">
+        <div class="title_and_button flex justify-between mb-[20px]"> 
+            <h1 id="meal_h1_header" class="text-4xl"></h1>
+            <button class="text-white p-[10px] bg-[#373D41] shadow-[1px_2px_4px_black] border border-[#EC7E4A] rounded-[10px] hover:text-white hover:bg-[#EC7E4A] hover:p-[10px] hover:rounded-[10px]" onclick="add_Meal()"><span>+ Add Meal</span></button>
         </div>
         <div>
-            <button class="button_save" type="submit" >SAVE</button>
-            <button class="button_cancel" onclick="cancel_modify_Meal()" type="button">CANCEL</button>
+            <table class="w-[1000px]">
+                <tr class="text-center">
+                    <th>Week No</th>
+                    <th>Day No</th>
+                    <th>Meal of the Day</th>
+                    <th>Meal Name</th>
+                    <th>Protein</th>
+                    <th>Carbs</th>
+                    <th>Fat</th>
+                    <th></th>
+                </tr>
+                <tr class="text-center">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td><button onclick="modify_Meal()" class="text-white p-[10px] bg-[#373D41] shadow-[1px_2px_4px_black] border border-[#EC7E4A] rounded-[10px] hover:text-white hover:bg-[#EC7E4A] hover:p-[10px] hover:rounded-[10px] hover:w-fit">Modify</button></td>
+                </tr>
+                <tr class="text-center">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td><button onclick="modify_Meal()" class="text-white p-[10px] bg-[#373D41] shadow-[1px_2px_4px_black] border border-[#EC7E4A] rounded-[10px] hover:text-white hover:bg-[#EC7E4A] hover:p-[10px] hover:rounded-[10px] hover:w-fit">Modify</button></td>
+                </tr>
+                <tr class="text-center">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td><button onclick="modify_Meal()" class="text-white p-[10px] bg-[#373D41] shadow-[1px_2px_4px_black] border border-[#EC7E4A] rounded-[10px] hover:text-white hover:bg-[#EC7E4A] hover:p-[10px] hover:rounded-[10px] hover:w-fit">Modify</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="button_div text-center">
+            <input class="button text-white mt-[20px] bg-[#323538] w-[30%] p-[10px] rounded-[10px] shadow-[1px_2px_4px_black] border border-[#EC7E4A] hover:text-white hover:bg-black hover:w-[30%] hover:p-[10px] hover:rounded-[10px]" type="button" value="CLOSE" onclick="cancel_viewMeal()">
         </div>
     </div>
 
-    <div id="add_meal_popup">
-        <h1>Add Meal</h1>
-        <div class="add_div">
-            <label for="name">Week Number: </label>
-            <input type="text" name="name" class="add_input" placeholder="Enter Week No.">
+    <div id="modify_meal_popup" class="border border-[#EC7E4A] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-[auto] pl-5 pr-5 bg-[#373D41] shadow-[1px_2px_4px_black] rounded-[10px] invisible">
+        <h1 class="text-center p-[10px] text-3xl">Modify Meal</h1>
+        <div class="modify_div flex justify-between p-[10px]">
+            <label for="name" class="pr-20">Week Number: </label>
+            <input type="text" name="Week_Number" class="modify_input p-[5px] bg-[#D9D9D9] text-black">
         </div>
-        <div class="add_div">
+        <div class="modify_div flex justify-between p-[10px]">
             <label for="description">Day Number: </label>
-            <input type="text" name="name" class="add_input" placeholder="Enter Day No.">
+            <input type="text" name="Day_Number" class="modify_input p-[5px] bg-[#D9D9D9] text-black">
         </div>
-        <div class="add_div">
+        <div class="modify_div flex justify-between p-[10px]">
             <label for="description">Meal of the Day: </label>
-            <input type="text" name="name" class="add_input" placeholder="Enter Meal of the Day">
+            <input type="text" name="MealoftheDay" class="modify_input p-[5px] bg-[#D9D9D9] text-black">
         </div>
-        <div class="add_div">
+        <div class="modify_div flex justify-between p-[10px]">
             <label for="description">Meal Name: </label>
-            <input type="text" name="name" class="add_input" placeholder="Enter Meal name">
+            <input type="text" name="Meal_Name" class="modify_input p-[5px] bg-[#D9D9D9] text-black">
         </div>
-        <div class="add_div">
+        <div class="modify_div flex justify-between p-[10px]">
             <label for="description">Protein: </label>
-            <input type="text" name="name" class="add_input" placeholder="Enter protein">
+            <input type="text" name="Protein" class="modify_input p-[5px] bg-[#D9D9D9] text-black">
         </div>
-        <div class="add_div">
+        <div class="modify_div flex justify-between p-[10px]">
             <label for="description">Carbs: </label>
-            <input type="text" name="name" class="add_input" placeholder="Enter carbs">
+            <input type="text" name="Carbs" class="modify_input p-[5px] bg-[#D9D9D9] text-black">
         </div>
-        <div class="add_div">
+        <div class="modify_div flex justify-between p-[10px]">
             <label for="description">Fat: </label>
-            <input type="text" name="name" class="add_input" placeholder="Enter fat">
+            <input type="text" name="Fat" class="modify_input p-[5px] bg-[#D9D9D9] text-black">
         </div>
         <div>
-            <button class="button_save" type="submit" >SAVE</button>
-            <button class="button_cancel" onclick="cancel_add_Meal()" type="button">CANCEL</button>
+            <button class="button_save text-white shadow-[1px_2px_black] bg-[#323538] border border-[#EC7E4A] mt-[20px] w-full p-[10px] rounded-[10px] hover:bg-primary-50" type="submit" >SAVE</button>
+            <button class="button_cancel mb-5 text-white shadow-[1px_2px_black] bg-[#323538] border border-[#EC7E4A] mt-[20px] w-full p-[10px] rounded-[10px] hover:bg-primary-50" onclick="cancel_modify_Meal()" type="button">CANCEL</button>
+        </div>
+    </div>
+ 
+    <div id="add_meal_popup" class="border border-[#EC7E4A] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-[auto] pl-5 pr-5 bg-[#373D41] shadow-[1px_2px_4px_black] rounded-[10px] invisible">
+        <h1 class="text-center p-[10px] text-3xl">Add Meal</h1>
+        <div class="add_div flex justify-between p-[10px]">
+            <label for="name">Week Number: </label>
+            <input type="text" name="name" class="add_input p-[5px] bg-[#D9D9D9] text-black" placeholder="Enter Week No.">
+        </div>
+        <div class="add_div flex justify-between p-[10px]">
+            <label for="description">Day Number: </label>
+            <input type="text" name="name" class="add_input p-[5px] bg-[#D9D9D9] text-black" placeholder="Enter Day No.">
+        </div>
+
+        <div class="add_div flex justify-between p-[10px]">
+            <label for="description">Meal of the Day: </label>
+            <input type="text" name="name" class="add_input p-[5px] bg-[#D9D9D9] text-black" placeholder="Enter Meal of the Day">
+        </div>
+
+        <div class="add_div flex justify-between p-[10px]">
+            <label for="description">Meal Name: </label>
+            <input type="text" name="name" class="add_input p-[5px] bg-[#D9D9D9] text-black" placeholder="Enter Meal name">
+        </div>
+
+        <div class="add_div flex justify-between p-[10px]">
+            <label for="description">Protein: </label>
+            <input type="text" name="name" class="add_input p-[5px] bg-[#D9D9D9] text-black" placeholder="Enter protein">
+        </div>
+
+        <div class="add_div flex justify-between p-[10px]">
+            <label for="description">Carbs: </label>
+            <input type="text" name="name" class="add_input p-[5px] bg-[#D9D9D9] text-black" placeholder="Enter carbs">
+        </div>
+
+        <div class="add_div flex justify-between p-[10px]">
+            <label for="description">Fat: </label>
+            <input type="text" name="name" class="add_input p-[5px] bg-[#D9D9D9] text-black" placeholder="Enter fat">
+        </div>
+        <div>
+            <button class="button_save text-white shadow-[1px_2px_black] bg-[#323538] border border-[#EC7E4A] mt-[20px] w-full p-[10px] rounded-[10px] hover:bg-primary-50" type="submit" >SAVE</button>
+            <button class="button_cancel mb-5 text-white shadow-[1px_2px_black] bg-[#323538] border border-[#EC7E4A] mt-[20px] w-full p-[10px] rounded-[10px] hover:bg-primary-50" onclick="cancel_add_Meal()" type="button">CANCEL</button>
         </div>
     </div>
 </body>

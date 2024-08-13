@@ -31,6 +31,9 @@ module.exports = {
           },
         },
       },
+      width: {
+        '1000': '1000px',
+      },
     },
   },
   plugins: [],

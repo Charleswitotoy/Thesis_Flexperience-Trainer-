@@ -21,7 +21,7 @@ function cancel_createWorkout(){
 }
 function cancel_viewWorkout(){
     var viewWorkout_popup = document.getElementById('view_workout_popup')
-    viewWorkout_popup.classList.toggle('active')
+    viewWorkout_popup.classList.add('invisible')
 }
 
 function modify_Workout(){
@@ -43,214 +43,25 @@ function cancel_add_Workout(){
 }
 
 function viewWorkout(planType){
+    const header = document.getElementById('workout_h1_header')
+    header.textContent = planType
 
     if (planType == 'Bulking Workout Plan'){
         const form = document.getElementById('view_workout_popup');
-        form.innerHTML = `
-        <div class="title_and_button"> 
-            <h1>${planType} Details</h1>
-            <button class="material-symbols-outlined" onclick="add_Workout()">add <span>Add Workout</span></button>
-        </div>
-        <div>
-            <table>
-                <tr>
-                    <th>Exercise Name</th>
-                    <th>Repititions</th>
-                    <th>Sets</th>
-                    <th>Target Muscle Group</th>
-                    <th>Week No</th>
-                    <th>Day No</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-            </table>
-        </div>
-        <div class="button_div">
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
-        </div>
-        `
+        form.classList.remove('invisible')
+
     }else if(planType == 'Strength Training Workout Plan'){
         const form = document.getElementById('view_workout_popup');
-        form.innerHTML = `
-        <div class="title_and_button"> 
-            <h1>${planType} Details</h1>
-            <button class="material-symbols-outlined" onclick="add_Workout()">add <span>Add Workout</span></button>
-        </div>
-        <div>
-            <table>
-                <tr>
-                    <th>Exercise Name</th>
-                    <th>Repititions</th>
-                    <th>Sets</th>
-                    <th>Target Muscle Group</th>
-                    <th>Week No</th>
-                    <th>Day No</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-            </table>
-        </div>
-        <div class="button_div">
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
-        </div>
-        `
+        form.classList.remove('invisible')
+
     }else if(planType == 'Body Building Workout Plan'){
         const form = document.getElementById('view_workout_popup');
-        form.innerHTML = `
-        <div class="title_and_button"> 
-            <h1>${planType} Details</h1>
-            <button class="material-symbols-outlined" onclick="add_Workout()">add <span>Add Workout</span></button>
-        </div>
-        <div>
-            <table>
-                <tr>
-                    <th>Exercise Name</th>
-                    <th>Repititions</th>
-                    <th>Sets</th>
-                    <th>Target Muscle Group</th>
-                    <th>Week No</th>
-                    <th>Day No</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-            </table>
-        </div>
-        <div class="button_div">
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
-        </div>
-        `
-    }else if(planType == 'Shredding Workout Plan'){
-        const form = document.getElementById('view_workout_popup');
-        form.innerHTML = `
-        <div class="title_and_button"> 
-            <h1>${planType} Details</h1>
-            <button class="material-symbols-outlined" onclick="add_Workout()">add <span>Add Workout</span></button>
-        </div>
-        <div>
-            <table>
-                <tr>
-                    <th>Exercise Name</th>
-                    <th>Repititions</th>
-                    <th>Sets</th>
-                    <th>Target Muscle Group</th>
-                    <th>Week No</th>
-                    <th>Day No</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-            </table>
-        </div>
-        <div class="button_div">
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
-        </div>
-        `
+        form.classList.remove('invisible')
     }
-    var viewWorkout_popup = document.getElementById('view_workout_popup')
-    viewWorkout_popup.classList.toggle('active')
+    else if(planType == 'Shredding Workout Plan'){
+        const form = document.getElementById('view_workout_popup');
+        form.classList.remove('invisible')
+    }
 }
 
 
@@ -273,25 +84,25 @@ function cancel_addnewMealPlan(){
 
 function cancel_viewMeal(){
     var viewMeal_popup = document.getElementById('view_meal_popup')
-    viewMeal_popup.classList.toggle('active')
+    viewMeal_popup.classList.add('invisible')
 }
 
 function modify_Meal(){
     var modify_meal_popup = document.getElementById('modify_meal_popup')
-    modify_meal_popup.classList.toggle('active')
+    modify_meal_popup.classList.remove('invisible')
 }
 function cancel_modify_Meal(){
     var modify_meal_popup = document.getElementById('modify_meal_popup')
-    modify_meal_popup.classList.toggle('active')
+    modify_meal_popup.classList.add('invisible')
 }
 
 function add_Meal(){
     var add_meal_popup = document.getElementById('add_meal_popup')
-    add_meal_popup.classList.toggle('active')
+    add_meal_popup.classList.remove('invisible')
 }
 function cancel_add_Meal(){
     var add_meal_popup = document.getElementById('add_meal_popup')
-    add_meal_popup.classList.toggle('active')
+    add_meal_popup.classList.add('invisible')
 }
 
 // function greet(){
@@ -303,175 +114,21 @@ function cancel_add_Meal(){
 // }
 
 function viewMeal(planType){
+    const header = document.getElementById('meal_h1_header')
+    header.textContent = planType
 
     if (planType == 'Bulking Meal Plan'){
         const form = document.getElementById('view_meal_popup');
-        form.innerHTML = `
-        <div class="title_and_button"> 
-            <h1>${planType} Details</h1>
-            <button class="material-symbols-outlined" onclick="add_Meal()">add <span>Add Meal</span></button>
-        </div>
-        <div>
-            <table>
-                <tr>
-                    <th>Week No</th>
-                    <th>Day No</th>
-                    <th>Meal of the Day</th>
-                    <th>Meal Name</th>
-                    <th>Protein</th>
-                    <th>Carbs</th>
-                    <th>Fat</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Meal()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Meal()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Meal()">Modify</button></td>
-                </tr>
-            </table>
-        </div>
-        <div class="button_div">
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewMeal()">
-        </div>
-        `
+        form.classList.remove('invisible')
+
     }else if(planType == 'Strength Training Meal Plan'){
         const form = document.getElementById('view_meal_popup');
-        form.innerHTML = `
-        <div class="title_and_button"> 
-            <h1>${planType} Details</h1>
-            <button class="material-symbols-outlined" onclick="add_Meal()">add <span>Add Meal</span></button>
-        </div>
-        <div>
-            <table>
-                <tr>
-                    <th>Week No</th>
-                    <th>Day No</th>
-                    <th>Meal of the Day</th>
-                    <th>Meal Name</th>
-                    <th>Protein</th>
-                    <th>Carbs</th>
-                    <th>Fat</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Meal()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Meal()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Meal()">Modify</button></td>
-                </tr>
-            </table>
-        </div>
-        <div class="button_div">
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewMeal()">
-        </div>
-        `
+        form.classList.remove('invisible')
+
     }else if(planType == 'Body Building Meal Plan'){
         const form = document.getElementById('view_meal_popup');
-        form.innerHTML = `
-        <div class="title_and_button"> 
-            <h1>${planType} Details</h1>
-            <button class="material-symbols-outlined" onclick="add_Meal()">add <span>Add Meal</span></button>
-        </div>
-        <div>
-            <table>
-                <tr>
-                    <th>Week No</th>
-                    <th>Day No</th>
-                    <th>Meal of the Day</th>
-                    <th>Meal Name</th>
-                    <th>Protein</th>
-                    <th>Carbs</th>
-                    <th>Fat</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Meal()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Meal()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Meal()">Modify</button></td>
-                </tr>
-            </table>
-        </div>
-        <div class="button_div">
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewMeal()">
-        </div>
-        `
+        form.classList.remove('invisible')
     }
-    var viewMeal_popup = document.getElementById('view_meal_popup')
-    viewMeal_popup.classList.toggle('active')
 }
 
 
@@ -528,15 +185,3 @@ const form = document.getElementById('view_students');
             <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
         </div>
         `
-
-
-function togglePopup(active) {
-    const popup = document.getElementById('view_meal_popup');
-    if (active) {
-        popup.classList.remove('invisible', 'opacity-0');
-        popup.classList.add('visible', 'opacity-100');
-    } else {
-        popup.classList.remove('visible', 'opacity-100');
-        popup.classList.add('invisible', 'opacity-0');
-    }
-    }

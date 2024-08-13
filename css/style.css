@@ -455,8 +455,6 @@ body {
   left: 50%;
   transform: translate(-50%,-50%);
   margin-top: 50px;
-  visibility: hidden;
-  opacity: 0;
 }
 
 #modify_workout_popup.active, #modify_meal_popup.active{
@@ -780,8 +778,6 @@ body {
   left: 50%;
   transform: translate(-50%,-50%);
   margin-top: 50px;
-  visibility: hidden;
-  opacity: 0;
 }
 
 #add_meal_popup.active{
