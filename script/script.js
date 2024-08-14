@@ -1,24 +1,6 @@
 
 
 //===========================WORKOUT PLAN JS===========================//
-
-function addnewWorkoutPlan(){
-    var newPlan_popup = document.getElementById('add_new_template_pop_up')
-    newPlan_popup.classList.toggle('active')
-}
-function cancel_addnewWorkoutPlan(){
-    var newPlan_popup = document.getElementById('add_new_template_pop_up')
-    newPlan_popup.classList.toggle('active')
-}
-
-function createWorkout(){
-    var createWorkout_popup = document.getElementById('create_new_workout_pop_up')
-    createWorkout_popup.classList.toggle('active')
-}
-function cancel_createWorkout(){
-    var createWorkout_popup = document.getElementById('create_new_workout_pop_up')
-    createWorkout_popup.classList.toggle('active')
-}
 function cancel_viewWorkout(){
     var viewWorkout_popup = document.getElementById('view_workout_popup')
     viewWorkout_popup.classList.add('invisible')
@@ -26,20 +8,20 @@ function cancel_viewWorkout(){
 
 function modify_Workout(){
     var modify_workout_popup = document.getElementById('modify_workout_popup')
-    modify_workout_popup.classList.toggle('active')
+    modify_workout_popup.classList.remove('invisible')
 }
 function cancel_modify_Workout(){
     var modify_workout_popup = document.getElementById('modify_workout_popup')
-    modify_workout_popup.classList.toggle('active')
+    modify_workout_popup.classList.add('invisible')
 }
 
 function add_Workout(){
     var add_workout_popup = document.getElementById('add_workout_popup')
-    add_workout_popup.classList.toggle('active')
+    add_workout_popup.classList.remove('invisible')
 }
 function cancel_add_Workout(){
     var add_workout_popup = document.getElementById('add_workout_popup')
-    add_workout_popup.classList.toggle('active')
+    add_workout_popup.classList.add('invisible')
 }
 
 function viewWorkout(planType){
@@ -71,6 +53,22 @@ function viewWorkout(planType){
 
 
 //=====================================MEAL PLAN JS=============================================//
+
+
+function customMeal(){
+    var customMeal = document.getElementById('custom_meal')
+    var premade_MealContent = document.getElementById('premade_meal')
+    customMeal.classList.remove('invisible')
+    premade_MealContent.classList.add('invisible')
+}
+function premadeMeal(){
+    var premade_Meal = document.getElementById('custom_meal')
+    var premade_MealContent = document.getElementById('premade_meal')
+    var button = document.getElementById('button')
+    premade_Meal.classList.add('invisible')
+    premade_MealContent.classList.remove('invisible')
+    button.classList.remove('duration-300')
+}
 
 
 function addnewMealPlan(){
@@ -135,53 +133,53 @@ function viewMeal(planType){
 
 //===================MEMBERS JS======================//
 
-const form = document.getElementById('view_students');
-        form.innerHTML = `
-        <div class="title_and_button"> 
-            <h1>${planType} Details</h1>
-            <button class="material-symbols-outlined" onclick="add_Workout()">add <span>Add Workout</span></button>
-        </div>
-        <div>
-            <table>
-                <tr>
-                    <th>Exercise Name</th>
-                    <th>Repititions</th>
-                    <th>Sets</th>
-                    <th>Target Muscle Group</th>
-                    <th>Week No</th>
-                    <th>Day No</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td><button onclick="modify_Workout()">Modify</button></td>
-                </tr>
-            </table>
-        </div>
-        <div class="button_div">
-            <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
-        </div>
-        `
+// const form = document.getElementById('view_students');
+//         form.innerHTML = `
+//         <div class="title_and_button"> 
+//             <h1>${planType} Details</h1>
+//             <button class="material-symbols-outlined" onclick="add_Workout()">add <span>Add Workout</span></button>
+//         </div>
+//         <div>
+//             <table>
+//                 <tr>
+//                     <th>Exercise Name</th>
+//                     <th>Repititions</th>
+//                     <th>Sets</th>
+//                     <th>Target Muscle Group</th>
+//                     <th>Week No</th>
+//                     <th>Day No</th>
+//                     <th></th>
+//                 </tr>
+//                 <tr>
+//                     <td>1</td>
+//                     <td>2</td>
+//                     <td>3</td>
+//                     <td>4</td>
+//                     <td>5</td>
+//                     <td>6</td>
+//                     <td><button onclick="modify_Workout()">Modify</button></td>
+//                 </tr>
+//                 <tr>
+//                     <td>1</td>
+//                     <td>2</td>
+//                     <td>3</td>
+//                     <td>4</td>
+//                     <td>5</td>
+//                     <td>6</td>
+//                     <td><button onclick="modify_Workout()">Modify</button></td>
+//                 </tr>
+//                 <tr>
+//                     <td>1</td>
+//                     <td>2</td>
+//                     <td>3</td>
+//                     <td>4</td>
+//                     <td>5</td>
+//                     <td>6</td>
+//                     <td><button onclick="modify_Workout()">Modify</button></td>
+//                 </tr>
+//             </table>
+//         </div>
+//         <div class="button_div">
+//             <input class="button" type="button" value="CLOSE" onclick="cancel_viewWorkout()">
+//         </div>
+//         `
