@@ -3,7 +3,7 @@
 const colors = 
 
 module.exports = {
-  content: ["./src/**/*.{html,js}", "./Trainer/**/*.{html,js}", "./script/**/*.{js}"],
+  content: ["./src/**/*.{html,js}", "./Trainer/**/*.{html,js}", "./script/**/*.{js}", "./Landing Page/**/*.{html,js}"],
   theme: {
     
     colors: {
@@ -12,7 +12,12 @@ module.exports = {
         51: '#343639',
         52: '#FFFFFF',
         'custom-bg': '#323538',
-        'custom-border': '#EC7E4A'
+        'custom-border': '#EC7E4A',
+        customGray: '#343639',
+        customOrange: '#EC7E4A',
+        guestNavbar: '#232121',
+        forGradientGray: '#232323',
+        forGradientWhite: '#898787',
       }
     },
     extend: {
