@@ -11,6 +11,7 @@
 </head>
 <style>
     html{
+        overflow-x: hidden;
         scroll-behavior: smooth;
     }
     li{
@@ -33,6 +34,18 @@
     }
     li:hover:after{
         width: 100%;
+    }
+    .box{
+        width: 250px;
+        height: 280px;
+        margin: 0px 5px;
+        transition: 1s;
+        border-radius: 10px;
+    }
+    .box:hover{
+        transform: scale(1.1);
+        z-index: 2;
+        box-shadow: 1px 1px 20px 6px #EC7E4A;
     }
 </style>
 <body class="bg-[#1E1E1E] font-customFont">
@@ -78,7 +91,7 @@
             <img class="h-5/6 w-5/6 pt-40 opacity-80" src="/img/map.png" alt="cannot load" data-aos="fade-left">
         </div>
     </div>
-    <div id="section1" class="flex mb-[130px]">
+    <div id="section1" class="flex mb-[130px] bg-[#444444]">
         <div class="flex" data-aos="fade-right">
             <div class="relative">
                 <img src="/img/paint.png" alt="cannot load">
@@ -89,7 +102,7 @@
                     fitness into <br>
                     shape.
                 </div>
-                <div class="text-white mt-5 text-left">
+                <div class="text-white mt-5 text-left" data-aos="fade-up">
                     Your fitness journey starts now. <br>
                     <span class="text-primary-50"> <a href="#">Log in</a></span> to explore.
                 </div>
@@ -99,7 +112,11 @@
             <img src="/img/push-up.png" alt="cannot load">
         </div>
     </div>
-    <div id="section2" class="flex">
+    <div>
+        <img class="w-44 h-44 opacity-20" src="/img/design-shape.png" alt="">
+    </div>
+
+    <div id="section2" class="flex mb-[130px]">
         <div class="mt-10" data-aos="fade-right">
             <img class="w-[80%] h-[90%]" src="/img/bench-press.png" alt="cannot load">
         </div>
@@ -113,7 +130,140 @@
                     training potential on Flexperience! <br>
                     <span class="text-primary-50"> <a href="#">Join here.</a></span>
                 </span>
+                <div class="w-auto h-auto flex shadow-xl rounded-md bg-[#222121]" data-aos="fade-up">
+                    <div class="p-12 text-4xl">
+                        50+
+                        <br>
+                        <span class="text-2xl">Total Members</span>
+                    </div>
+                    <div class="p-12 text-4xl">
+                        50+
+                        <br>
+                        <span class="text-2xl">Trainers</span>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div id="section3" class="flex">
+        <img class="relative w-2/4 h-2/4 items-start justify-start mt-10" src="/img/paint2.png" alt="cannot load">
+        <div class="absolute text-white table-column justify-center items-center w-screen mt-28 text-center">
+            <div data-aos="fade-down">
+                <span class="font-bold text-4xl">
+                    Why Flexperience?
+                </span>
+                <br>
+                <br>
+                <span class="font-extralight">
+                    It is your all-in-one fitness companion. <br>
+                        Find gyms, create routines, and fuel your body.
+                </span>
+                <br>
+                <br>
+                <br>
+                <span>
+                    Separated UI’s for members and trainers.
+                </span>
+            </div>
+            <div class=" flex gap-16 w-screen h-screen mt-2 justify-center">
+                <div data-aos="fade-right">
+                    <div class="box">
+                        <button>
+                            <img src="/img/student-ui.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="box">
+                        <button>
+                            <img class="w-82 h-72 hover:w-96 duration-500" src="/img/trainer-ui.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" flex text-white relative">
+        <img class="w-auto h-auto opacity-25" src="/img/paint3.png" alt="cannot load">
+        <div class="absolute mr-44 top-24 left-48 text-5xl font-bold" data-aos="fade-right">
+            What <br> 
+            Flexperience <br> 
+            offers
+        </div>
+        <div class="pt-32" data-aos="fade-left">
+            <div>
+                We are consistently improving our offering of services, and pride ourselves on creating connections with the members and trainers and delivering the most personalized fitness experience possible.
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-between pl-20 pr-20 text-white mb-10" data-aos="fade-up">
+        <div class="w-64 h-44  rounded-xl" style="background: rgb(137,135,135);background: linear-gradient(90deg, rgba(137,135,135,1) 0%, rgba(39,37,37,1) 50%);">
+            <lord-icon
+                class="top-2 rounded-md"
+                src="https://cdn.lordicon.com/iikoxwld.json" trigger="loop" colors="primary:white" style="width:80px;height:50px">
+            </lord-icon>
+            <br>
+            <b class="pl-4 text-xl">
+                Gym Locator
+            </b>
+            <p class="pl-4 pr-4 pt-2 text-xs">
+                Flexperience offers maps for you to navigate fitness gyms around you.
+            </p>
+        </div>
+
+        <div class="w-64 h-44   rounded-xl" style="background: rgb(137,135,135);background: linear-gradient(90deg, rgba(137,135,135,1) 0%, rgba(39,37,37,1) 50%);">
+            <lord-icon 
+                class="top-2 rounded-md"
+                src="https://cdn.lordicon.com/oxbjzlrk.json"
+                trigger="loop"
+                delay="100"
+                colors="primary:white,secondary:white"
+                style="width:80px;height:50px">
+            </lord-icon>
+            <br>
+            <b class="pl-4 text-xl">
+                Recreational Areas
+            </b>
+            <p class="pl-4 pr-4 pt-2 text-xs">
+                Flexperience offers maps for you to navigate recreational areas near you for you to exercise.
+            </p>
+        </div>
+
+        <div class="w-64 h-44  rounded-xl" style="background: rgb(137,135,135);background: linear-gradient(90deg, rgba(137,135,135,1) 0%, rgba(39,37,37,1) 50%);">
+            <lord-icon
+                class="top-2"
+                src="https://cdn.lordicon.com/zzdcdltp.json"
+                trigger="loop"
+                colors="primary:white,secondary:white"
+                style="width:84px;height:50px">
+            </lord-icon>
+            <br>
+            <b class="pl-4 text-xl">
+                Workout Plans
+            </b>
+            <p class="pl-4 pr-4 pt-2 text-xs">
+                Flexperience offers workout plans and even more better with customized workout plans that is only for you.
+            </p>
+        </div>
+
+        <div class="w-64 h-44   rounded-xl" style="background: rgb(137,135,135);background: linear-gradient(90deg, rgba(137,135,135,1) 0%, rgba(39,37,37,1) 50%);">
+            <lord-icon
+                class="top-2"
+                src="https://cdn.lordicon.com/fmclztgv.json"
+                trigger="loop"
+                colors="primary:white,secondary:white"
+                style="width:80px;height:50px">
+            </lord-icon>
+            <br>
+            <b class="pl-4 text-xl">
+                Meal Plans
+            </b>
+            <p class="pl-4 pr-4 pt-2 text-xs">
+                Flexperience offers meal plans and even more better with customized meal plans that is only for you.
+            </p>
         </div>
     </div>
 </body>

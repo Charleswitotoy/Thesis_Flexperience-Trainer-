@@ -13,17 +13,18 @@ module.exports = {
         52: '#FFFFFF',
         'custom-bg': '#323538',
         'custom-border': '#EC7E4A',
-        customGray: '#343639',
+        'customGray': '#343639',
         customOrange: '#EC7E4A',
         guestNavbar: '#232121',
         forGradientGray: '#232323',
-        forGradientWhite: '#898787',
+        'forGradientWhite': '#898787',
       }
     },
     extend: {
       // Add this to include custom utilities
       fontFamily:{
-        customFont: ['"Aldrich"', "sans-serif"]
+        customFont: ['"Aldrich"', "sans-serif"],
+        customFont2:['"Montserrat"', "sans-serif"],
       },
       boxShadow: {
         'custom-shadow': '1px 2px 4px black',
