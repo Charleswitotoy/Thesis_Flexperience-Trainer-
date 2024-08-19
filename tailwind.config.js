@@ -21,7 +21,6 @@ module.exports = {
       }
     },
     extend: {
-      // Add this to include custom utilities
       fontFamily:{
         customFont: ['"Aldrich"', "sans-serif"],
         customFont2:['"Montserrat"', "sans-serif"],
